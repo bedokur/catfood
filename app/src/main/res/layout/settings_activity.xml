@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="SettingsFragment"
+            type="com.example.cats.activities.SettingsActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.SettingsActivity">
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hours_rcv"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/minutes_rcv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/time_setting_hours_recycler" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/minutes_rcv"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/hours_rcv"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="@+id/hours_rcv"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/time_setting_hours_recycler" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/point"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/minutes_rcv"
+            app:layout_constraintEnd_toStartOf="@+id/minutes_rcv"
+            app:layout_constraintStart_toEndOf="@+id/hours_rcv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/time_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:text="@string/string_set_time"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/minutes_rcv"
+            app:layout_constraintStart_toStartOf="@+id/hours_rcv"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/tv_timer_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="@string/timer_string"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/time_set"
+            app:layout_constraintEnd_toEndOf="@+id/minutes_rcv"
+            app:layout_constraintStart_toStartOf="@+id/hours_rcv"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/current_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_timer"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:visibility="invisible"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/minutes_rcv"
+            app:layout_constraintStart_toStartOf="@+id/hours_rcv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

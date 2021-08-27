@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Cats</string>
+    <string name="timer">Timer</string>
+    <string name="button">Button</string>
+    <string name="excellent">Excellent!!!</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="close">close</string>
+    <string name="item">Item</string>
+    <string name="point">:</string>
+    <string name="string_set_time">Установить время</string>
+    <string name="timer_string">Таймер на\n %1$s часов %2$s минут</string>
+    <string name="kitkat">KitKat</string>
+    <string name="feed">Кормить</string>
+    <string name="which_food">Чем кормим?</string>
+    <string name="settings">Настройки</string>
+    <string name="current_timer">Текущий таймер\n %1$s часов %2$s минут</string>
+    <string name="addfoodname">Добавить еду</string>
+    <string name="setting">Настройки</string>
+    <string name="new_food">Новая еда</string>
+    <string name="addonehour">+1 час</string>
+    <string name="minusonehour">-1 час</string>
+    <string name="blank_chrono">00:00:00</string>
+    <string name="wh">Whiskass</string>
+    <string name="whiskas">Whiskas</string>
+</resources>
