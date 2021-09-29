@@ -4,7 +4,9 @@ import com.example.cats.CatsApplication
 import com.example.cats.activities.MainActivity
 import com.example.cats.activities.SettingsActivity
 import dagger.Component
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [MyModule::class])
 interface ApplicationComponent {
     fun inject(app: CatsApplication)

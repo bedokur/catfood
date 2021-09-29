@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 
-class FedRepository @Inject constructor(private val FedDao: FedDao) {
+class FedRepository constructor(private val FedDao: FedDao) {
 
     val allFedData: Flow<List<FedData>> = FedDao.getAllList()
 

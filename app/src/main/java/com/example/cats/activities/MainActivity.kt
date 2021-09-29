@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity(), FoodItemAdapter.OnItemClickListener {
         ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
         setContentView(view)
 
-        (applicationContext as CatsApplication).appComponent.injectAct(this@MainActivity)
+        (applicationContext as CatsApplication).appComponent?.injectAct(this@MainActivity)
 
         tPreference = getSharedPreferences("appCat", Context.MODE_PRIVATE)
 

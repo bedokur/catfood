@@ -58,7 +58,7 @@ class SettingsActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        (applicationContext as CatsApplication).appComponent.injectSet(this)
+        (applicationContext as CatsApplication).appComponent?.injectSet(this)
 
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
 

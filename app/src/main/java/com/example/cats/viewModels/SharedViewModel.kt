@@ -10,7 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class SharedViewModel @Inject constructor(private val repository: FedRepository) : ViewModel() {
+class SharedViewModel (private val repository: FedRepository) : ViewModel() {
 
     val fedDataList: LiveData<List<FedData>> = repository.allFedData.asLiveData()
 
